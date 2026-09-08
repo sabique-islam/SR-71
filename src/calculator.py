@@ -35,7 +35,18 @@ def divide(a, b):
 
 # TODO: Students will add multiply, divide, power, sqrt functions
 
+def power(a, b):
+    """Raise a to the power of b"""
+    return a ** b
+def sqrt(a):
+    """Take the square root of a"""
+    return a ** 0.5
+
 if __name__ == "__main__":
     print("🧮 Calculator Module")
     print(f"2 + 3 = {add(2, 3)}")
     print(f"5 - 2 = {subtract(5, 2)}")
+    print(f"2 × 3 = {multiply(2, 3)}")
+    print(f"8 ÷ 2 = {divide(8, 2)}")
+    print(f"2 ^ 3 = {power(2, 3)}")
+    print(f"√9 = {sqrt(9)}")

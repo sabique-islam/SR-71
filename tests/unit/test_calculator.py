@@ -3,7 +3,7 @@ Unit Tests for Calculator
 Students start with 2 passing tests, then add more
 """
 import pytest
-from src.calculator import add, divide, subtract, multiply
+from src.calculator import add, divide, subtract, multiply, sqrt
 
 class TestBasicOperations:
     """Test basic arithmetic operations"""
@@ -32,6 +32,15 @@ class TestMultiplyDivideWithValidation:
         """Test divide rejects non-numeric inputs."""
         with pytest.raises(TypeError, match="Division requires numeric inputs"):
             divide("10", 2)
+
+    def test_sqrt_input_validation(self):
+        """Test sqrt rejects non-numeric inputs."""
+        with pytest.raises(TypeError, match="Both arguments must be numbers"):
+            sqrt("9")
+        with pytest.raises(TypeError, match="Both arguments must be numbers"):
+            sqrt(9, "3")
+        
+    
 
 # TODO: Students will add TestMultiplyDivide class
 
